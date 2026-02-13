@@ -473,10 +473,10 @@
             </div>
         </div>
     </div>
-       <audio id="backgroundMusic" autoplay loop>
-        <source src="intro.wav" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <audio id="backgroundMusic" autoplay loop muted>
+    <source src="intro.wav" type="audio/wav">  <!-- hoặc type="audio/mpeg" nếu là .mp3 -->
+    Your browser does not support the audio element.
+</audio>
     <script>
         let password = "";
         const correctPassword = "25092005";
@@ -532,6 +532,17 @@
         }
 
         window.addEventListener("load", createBackgroundEffects);
+        // === THÊM ĐOẠN NÀY VÀO ĐÂY ===
+    document.body.addEventListener('click', function unmuteAudio() {
+        const audio = document.getElementById('backgroundMusic');
+        if (audio) {
+            audio.muted = false;          // Bỏ mute để nghe được tiếng
+            audio.volume = 0.5;           // Âm lượng vừa phải (có thể đổi thành 0.3 đến 0.8 tùy thích)
+        }
+        // Chỉ chạy 1 lần
+        document.body.removeEventListener('click', unmuteAudio);
+    }, { once: true });
+    // === HẾT ĐOẠN THÊM ===
     </script>
 </body>
 
