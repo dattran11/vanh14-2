@@ -960,25 +960,20 @@
     </style>
 </head>
 
+
 <body>
     <div id="romanticScene"></div>
      <div class="cake-container">
         <div class="cake">
-        
+    
                 <div class="boxheart">
             <div class="heart"><h1></h1></div>
             <div class="beat"></div>
-              <div class="boxchoose">
-            <h2>LÀM BẠN GÁI A NHÉ BẤY BI</h2>
-            <div class="listbutton">
-                <button id="no">Never</button>
-                <button id="yes">Em chịu</button>
+            
+         
+               
               
-              
-                </div>
-            </div>
-        </div>
-    </div>
+
     <button class="balloon-button" onclick="releaseBalloons()">Thả Bóng Bay</button>
     <div class="birthday-message" id="birthdayMessage">ĐỒ ĐÁNG GHÉCC </div>
 
@@ -997,7 +992,7 @@
         <button class="album-button next" onclick="changePhoto(1)">Sau</button>
     </div>
     <audio id="backgroundMusic" autoplay loop>
-        <source src="dab.mp3" type="audio/mpeg">
+        <source src="vanh.wav" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
     <script>
@@ -1073,7 +1068,7 @@
                         balloonContainer.style.left = Math.random() * 80 + 10 + 'vw';
                         balloonContainer.style.animationDelay = Math.random() * 3 + 's';
 
-                        for (let j = 0; j < 15; j++) {
+                        for (let j = 0; j < 2; j++) {
                             let balloon = document.createElement('div');
                             balloon.className = 'balloon';
                             balloon.style.left = Math.random() * 120 + 15 + 'px';
@@ -1094,7 +1089,7 @@
                 function createFireworks() {
                     const fireworkColors = ['red', 'blue', 'green', 'purple', 'pink'];
                     const fireworkShapes = ['strip', 'star'];
-                    for (let i = 0; i < 100; i++) {
+                    for (let i = 0; i < 45; i++) {
                         let firework = document.createElement('div');
                         const shape = fireworkShapes[Math.floor(Math.random() * 2)];
                         firework.className = `firework ${shape} ${fireworkColors[Math.floor(Math.random() * 5)]}`;
